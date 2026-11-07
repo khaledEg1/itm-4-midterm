@@ -72,8 +72,8 @@ document.addEventListener('click', function(e){
 </script>
 <script>
 (function(){var el=document.getElementById("vcountNum");if(!el)return;
-var base="https://abacus.jasoncameron.dev/",ns="itm-4-midterm-khaledeg1/views",hit=true;
-try{if(sessionStorage.getItem("vcHit"))hit=false;else sessionStorage.setItem("vcHit","1");}catch(e){}
+var base="https://abacus.jasoncameron.dev/",ns="itm-4-midterm-khaledeg1/views",cooldown=30*60*1000,now=Date.now(),hit=true;
+try{var lastRefresh=Number(sessionStorage.getItem("vcLastRefresh"));hit=!lastRefresh||now-lastRefresh>=cooldown;sessionStorage.setItem("vcLastRefresh",String(now));}catch(e){}
 fetch(base+(hit?"hit/":"get/")+ns)
 .then(function(r){return r.json()})
 .then(function(d){if(d&&typeof d.value==="number")el.textContent=d.value.toLocaleString("en-US")})
