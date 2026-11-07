@@ -268,6 +268,7 @@ Ratio = 7,000 / 1,400 = 5</div>
     </ul>
    </div>
   </section>
+ </div>
  <div class="sp" id="nlp-mle" hidden>
 
 <div class=\"call\">Statistical NLP estimates the probability of words from a text corpus.<br>The main tool is the <b>N-gram language model</b>, and its probabilities are estimated with <b>Maximum Likelihood Estimation (MLE)</b>.</div>
