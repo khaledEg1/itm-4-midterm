@@ -1,3 +1,4 @@
+// Mobile Apps subject — version 1.4 (tab label restored + NEW badge; subject flagged "اتحدث" in app.js)
 (() => {
 const li = items => "<ul>" + items.map(item => "<li>" + item + "</li>").join("") + "</ul>";
 
@@ -14,6 +15,7 @@ window.SUBJECTS.mob = {id:"mob", title:"تطبيقات الموبايل", done:t
  <button data-sub="mob-l4" aria-selected="false">Lecture 4: iOS Life Cycle &amp; Intents</button>
  <button data-sub="mob-q" aria-selected="false">Essay Practice</button>
  <button data-sub="mob-hl" aria-selected="false">Review Checklist</button>
+ <button data-sub="mob-x" aria-selected="false">Likely Exam Questions <span class="newbadge">NEW</span></button>
 </div>
 
 <div class="sp" id="mob-l1">
@@ -487,7 +489,268 @@ intent.<span class="tk-f">addCategory</span>(<span class="tk-s">"android.intent.
   }
 }</div>
  </section>
- <div class="botnav" aria-label="التنقل بين الأجزاء"><button data-sub="mob-q">‹ السابق: Essay Practice</button><span></span></div>
+ <div class="botnav" aria-label="التنقل بين الأجزاء"><button data-sub="mob-q">‹ السابق: Essay Practice</button><button data-sub="mob-x">التالي: Likely Exam Questions ›</button></div>
+</div>
+<div class="sp" id="mob-x" hidden>
+ <div class="call tip"><b>Likely Exam Questions:</b> the exam is <b>essay</b>. For each lecture, these are the parts most likely to come, ranked by how often the lecture stresses them (highlighted passages, self-assessments, repeated questions), each with a ready-to-write solution. <mark class="hl">Very likely</mark> = highlighted / repeated / lecture task. <b>Likely</b> = core topic of the lecture.</div>
+
+ <section class="block"><h3><svg class="ic" aria-hidden="true"><use href="#i-antenna"/></svg>Lecture 1 — Introduction</h3>
+
+  <div class="qa"><div class="qq"><span class="qn">Q1.</span> <mark class="hl">Very likely</mark><br>Explain the multi-layered architecture and MVC (Model, View, Controller).</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p><b>MVC</b> supports <b>loose coupling</b> and flexible modular components.</p>
+  <div class="tw"><table class="cmp"><tr><th>Part</th><th>Role</th><th>Layer</th></tr>
+  <tr><td><b>Model</b></td><td>Data and application-related information</td><td>Data layer: database access, DAO, query components, ORM</td></tr>
+  <tr><td><b>View</b></td><td>The user interface</td><td>Presentation layer: portlets, widgets, pages, UI modules, buttons, forms (REST calls to the back end)</td></tr>
+  <tr><td><b>Controller</b></td><td>Handles user input and coordinates the Model and the View</td><td>Business layer: business logic and rules, rules engine, workflows, services</td></tr></table></div>
+  <p>Extra layers: web content management, e-commerce, integration/services (ESB), and security (authentication, authorization, SSO).</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q2.</span> <mark class="hl">Very likely</mark><br>Compare a web application and a mobile application.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="tw"><table class="cmp"><tr><th>Criteria</th><th>Web application</th><th>Mobile application</th></tr>
+  <tr><td>Designed for</td><td>Desktop browsers</td><td>Mobile devices, full device capabilities, rich branding</td></tr>
+  <tr><td>Device features</td><td>Limited</td><td>Camera, sensors, GPS, notifications</td></tr>
+  <tr><td>Location awareness</td><td>Relatively less</td><td>Location-sensitive and contextual</td></tr>
+  <tr><td>Code base / cost</td><td>Single code base, lower cost</td><td>Multiple code bases, higher maintenance cost</td></tr>
+  <tr><td>Access</td><td>Desktop and mobile browsers</td><td>Mobile browsers and mobile devices</td></tr>
+  <tr><td>Interactivity</td><td>Through widgets</td><td>High, through the touch interface</td></tr>
+  <tr><td>Typical use</td><td>Information display platforms (news, blogs)</td><td>Gaming, location-specific apps</td></tr></table></div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q3.</span> <mark class="hl">Very likely</mark><br>Discuss the main considerations (and challenges) when developing a mobile application.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p><b>Considerations:</b></p><ul><li><b>Intended utility:</b> engagement, productivity, revenue, conversion, loyalty.</li><li><b>App architecture:</b> native vs hybrid vs web; middleware; offline vs online data.</li><li><b>Development principles:</b> user experience, compatibility, performance, security, productivity tools.</li><li><b>Target users:</b> consumers (B2C), business (B2B), partners, employees (B2E).</li><li><b>Testing:</b> device, performance, various scenarios.</li></ul>
+  <p><b>Challenges:</b> diversity of devices and platforms (optimal experience everywhere), data security in transmission and storage, optimal user experience with the highest engagement, network latency and bandwidth, compliance with diverse standards, OS and devices.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q4.</span> <mark class="hl">Very likely</mark><br>Compare WAP and REST.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="tw"><table class="cmp"><tr><th></th><th>WAP</th><th>REST</th></tr>
+  <tr><td>Meaning</td><td>Wireless Application Protocol: rules for wireless devices such as smartphones</td><td>Representational State Transfer: lightweight communication between mobile web apps and the server</td></tr>
+  <tr><td>Optimized for</td><td>Low-memory, low-bandwidth devices</td><td>Light-weight service calls, usually exchanging JSON</td></tr></table></div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q5.</span> <mark class="hl">Very likely</mark><br>Describe the term "user experience" in mobile computing.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>How the user feels when using the app: a responsive, interactive UI with simple actionable information; use of the camera, sensors, media output, touch/multi-touch/voice and location; good performance on every screen and task; and an optimal experience on all devices and networks, aiming at the highest engagement possible.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q6.</span> Likely<br>Discuss the advantages and disadvantages of web-based mobile applications.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p><b>Advantages:</b> single code base (lower development and maintenance cost), separation of content and design, responsive design, faster development, nothing to install. <b>Disadvantages:</b> browser compatibility, complexity, limited use of device features (camera, sensors, GPS), less personalization and location awareness.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q7.</span> Likely<br>List the key drivers, attributes and sensors/communication of mobile apps.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <ul><li><b>Drivers:</b> innovation, consumer behavior, personalized content delivery, mobile ecosystem (app stores), social networking.</li>
+  <li><b>Attributes:</b> ubiquity, user friendliness (interactive UI, camera, sensors, touch/voice), location awareness, minimalistic.</li>
+  <li><b>Communication range:</b> cellular = miles, Wi-Fi = yards, Bluetooth = feet, NFC = inches.</li>
+  <li><b>Sensors:</b> location (GPS), heading, orientation, acceleration, proximity, light, temperature, pressure, magnetic field.</li></ul></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q8.</span> Likely<br>Trace the evolution of mobile apps.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>Embedded systems with limited functionality (e.g. calculators) → device-specific apps (games, utilities) → operating-system-specific apps (games, media players) → cloud-based apps.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q9.</span> Likely<br>Compare Android and iOS.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="tw"><table class="cmp"><tr><th></th><th>Android</th><th>iOS</th></tr>
+  <tr><td>Owner</td><td>Open source, maintained by Google</td><td>Apple devices only</td></tr>
+  <tr><td>Language</td><td>Java / Kotlin</td><td>Objective-C / Swift</td></tr>
+  <tr><td>Tools</td><td>Android SDK, emulator, Android Studio</td><td>iOS SDK, simulator, Xcode (macOS only)</td></tr>
+  <tr><td>Features</td><td>SQLite storage, SMS/MMS, multi-touch, multi-tasking, voice, external storage</td><td>iMessage, iCloud, Siri</td></tr>
+  <tr><td>Store</td><td>Google Play</td><td>App Store</td></tr></table></div></div></div>
+ </section>
+
+ <section class="block"><h3><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Lecture 2 — App Types &amp; Architecture</h3>
+
+  <div class="qa"><div class="qq"><span class="qn">Q1.</span> <mark class="hl">Very likely</mark><br>Compare web-based, native and hybrid mobile applications.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="tw"><table class="cmp"><tr><th></th><th>Web-based</th><th>Native</th><th>Hybrid</th></tr>
+  <tr><td>Built with</td><td>HTML, CSS, JavaScript</td><td>Kotlin/Java (Android), Swift (iOS)</td><td>Web technologies + native features (Apache Cordova)</td></tr>
+  <tr><td>Runs in</td><td>Browser (nothing installed)</td><td>Installed, one OS only</td><td>Installed, many OS</td></tr>
+  <tr><td>Device features</td><td>Limited</td><td>Full access (camera, GPS, sensors)</td><td>Through native APIs</td></tr>
+  <tr><td>Performance</td><td>Good</td><td>High</td><td>Good</td></tr>
+  <tr><td>Cost / time</td><td>Lowest, one code base, fastest</td><td>Highest, more time</td><td>Medium, most code reused</td></tr></table></div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q2.</span> <mark class="hl">Very likely</mark><br>What is a native mobile application? Give its advantages and disadvantages.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>An application developed specifically for one mobile operating system (Android or iOS), built in a platform-specific language such as Kotlin/Java for Android.</p>
+  <p><b>Advantages:</b> high performance; full access to device features (camera, GPS, sensors). <b>Disadvantages:</b> higher development cost; more development time (a separate code base per platform).</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q3.</span> <mark class="hl">Very likely</mark><br>What is Responsive Web Design (RWD)? Explain its techniques and features.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>RWD provides flexible layouts that automatically adapt to different devices and screen sizes using:</p>
+  <ul><li><b>Fluid design:</b> sizes in relative units instead of fixed pixels.</li><li><b>Flexible images and media:</b> scale with the screen resolution.</li><li><b>CSS3 media queries:</b> device-dependent CSS rules.</li></ul>
+  <p><b>Features:</b> optimal user experience, cost effective (one code base, one CMS), improved SEO (same URL across devices), increased conversions.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q4.</span> <mark class="hl">Very likely</mark><br>MVC exercise: a student enters an ID and clicks Search; the app queries the database and shows the name, department and GPA. Classify each part as Model, View or Controller.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="tw"><table class="cmp"><tr><th>Component</th><th>Part</th></tr>
+  <tr><td>Login/Search screen</td><td>View</td></tr><tr><td>Student database</td><td>Model</td></tr><tr><td>"Search" button</td><td>View</td></tr>
+  <tr><td>Code that receives the button click</td><td>Controller</td></tr><tr><td>Student information (Name, ID, GPA)</td><td>Model</td></tr>
+  <tr><td>Code that requests student data from the database</td><td>Controller</td></tr><tr><td>Displaying the student's GPA</td><td>View</td></tr></table></div>
+  <p><b>Rule:</b> what the user sees = View; data = Model; code connecting them (handles clicks, requests data) = Controller.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q5.</span> Likely<br>Explain the functions (layers) of a hybrid app.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <ul><li><b>Application UI:</b> login, home, profile, cart, buttons, menus.</li><li><b>Business rules:</b> calculate price, validate information, determine permissions, process an order.</li><li><b>Service integration layer:</b> connects to backend services.</li><li><b>Security framework</b> and <b>authentication/user management</b> (online or offline).</li><li><b>Localization:</b> different languages or regions.</li><li><b>Data access layer:</b> locally stored data (settings, cache).</li><li><b>Native bridge / wrapper:</b> lets JavaScript communicate with native device functions.</li></ul>
+  <p>Presentation = RWD with HTML5, CSS3, Bootstrap, jQuery, packaged with <b>Apache Cordova</b> (native component + web component). Business = REST/JSON services. Security = user authorization through user registry services.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q6.</span> Likely<br>Draw/explain the structure of the three app stacks (native, hybrid, web).</div><div class="qa-a"><div class="alab">Solution:</div>
+  <ul><li><b>Native:</b> Your App → Operating System &amp; Device.</li><li><b>Hybrid:</b> Your App inside a Native Wrapper App (embedded web views, native UI views, native hardware access) → OS &amp; Device.</li><li><b>Web:</b> Your App → Web Browser → OS &amp; Device.</li></ul>
+  <p>Hybrid app: native code and web code (HTML, CSS, JS) communicate through a <b>JavaScript bridge</b> to the mobile OS and hardware, and the app talks to the middleware/backend (database, 3rd-party APIs).</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q7.</span> Likely<br>What performance metrics matter for a hybrid app?</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>Start-up/loading time; network stability, latency and bandwidth; processing speed (frontend/backend); file-system access time and throughput; number of remote calls.</p></div></div>
+ </section>
+
+ <section class="block"><h3><svg class="ic" aria-hidden="true"><use href="#i-loop"/></svg>Lecture 3 — OS Issues &amp; Android Life Cycle</h3>
+
+  <div class="qa"><div class="qq"><span class="qn">Q1.</span> <mark class="hl">Very likely</mark><br>Explain the Android activity life cycle methods.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="tw"><table class="cmp"><tr><th>Method</th><th>When / what to do</th></tr>
+  <tr><td><b>onCreate()</b></td><td>Activity created: create views, initialize variables, restore saved state, set the layout</td></tr>
+  <tr><td><b>onStart()</b></td><td>Activity becomes visible: prepare it for display, register components needed while visible</td></tr>
+  <tr><td><b>onResume()</b></td><td>User can interact: start tasks needing interaction, resume animations/camera</td></tr>
+  <tr><td><b>onPause()</b></td><td>Another activity comes to the foreground: save data quickly, release resources; the last method guaranteed to be called</td></tr>
+  <tr><td><b>onStop()</b></td><td>No longer visible: release resources, stop updates, save state</td></tr>
+  <tr><td><b>onRestart()</b></td><td>User returns to a stopped activity; onStart() runs next</td></tr>
+  <tr><td><b>onDestroy()</b></td><td>finish() is called or the system destroys the activity: clean up resources, remove listeners</td></tr></table></div>
+  <div class="fm">Launched → <span class="tk-f">onCreate()</span> → <span class="tk-f">onStart()</span> → <span class="tk-f">onResume()</span> → [Running]
+<span class="tk-f">onPause()</span> → <span class="tk-f">onStop()</span> → <span class="tk-f">onDestroy()</span> → Shut down
+<span class="tk-f">onStop()</span> → (user returns) → <span class="tk-f">onRestart()</span> → <span class="tk-f">onStart()</span></div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q2.</span> <mark class="hl">Very likely</mark><br>Write the Java code of an Activity that overrides the life-cycle methods and logs each one.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="fm"><span class="tk-k">public class</span> <span class="tk-t">MainActivity</span> <span class="tk-k">extends</span> <span class="tk-t">Activity</span> {
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">protected void</span> <span class="tk-f">onCreate</span>(<span class="tk-t">Bundle</span> savedInstanceState) {
+    <span class="tk-k">super</span>.<span class="tk-f">onCreate</span>(savedInstanceState);
+    <span class="tk-f">setContentView</span>(R.layout.activity_main);
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"lifecycle"</span>, <span class="tk-s">"onCreate invoked"</span>);
+  }
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">protected void</span> <span class="tk-f">onStart</span>() {
+    <span class="tk-k">super</span>.<span class="tk-f">onStart</span>();
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"lifecycle"</span>, <span class="tk-s">"onStart invoked"</span>);
+  }
+
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">protected void</span> <span class="tk-f">onResume</span>() {
+    <span class="tk-k">super</span>.<span class="tk-f">onResume</span>();
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"lifecycle"</span>, <span class="tk-s">"onResume invoked"</span>);
+  }
+
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">protected void</span> <span class="tk-f">onPause</span>() {
+    <span class="tk-k">super</span>.<span class="tk-f">onPause</span>();
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"lifecycle"</span>, <span class="tk-s">"onPause invoked"</span>);
+  }
+
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">protected void</span> <span class="tk-f">onStop</span>() {
+    <span class="tk-k">super</span>.<span class="tk-f">onStop</span>();
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"lifecycle"</span>, <span class="tk-s">"onStop invoked"</span>);
+  }
+
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">protected void</span> <span class="tk-f">onRestart</span>() {
+    <span class="tk-k">super</span>.<span class="tk-f">onRestart</span>();
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"lifecycle"</span>, <span class="tk-s">"onRestart invoked"</span>);
+  }
+
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">protected void</span> <span class="tk-f">onDestroy</span>() {
+    <span class="tk-k">super</span>.<span class="tk-f">onDestroy</span>();
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"lifecycle"</span>, <span class="tk-s">"onDestroy invoked"</span>);
+  }
+}</div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q3.</span> <mark class="hl">Very likely</mark><br>What is the function of <code>setContentView(R.layout.activity_main);</code>?</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>It loads and displays the user interface defined in <b>res/layout/activity_main.xml</b> in the current Activity.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q4.</span> <mark class="hl">Very likely</mark><br>How is an activity declared, and what makes it the main (launcher) activity?</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>Every activity must be declared in <b>AndroidManifest.xml</b>. The main activity needs an <b>&lt;intent-filter&gt;</b> with the <b>MAIN</b> action and the <b>LAUNCHER</b> category.</p>
+  <div class="fm"><span class="tk-p">&lt;activity</span> <span class="tk-at">android:name</span>=<span class="tk-s">".MainActivity"</span> <span class="tk-at">android:exported</span>=<span class="tk-s">"true"</span><span class="tk-p">&gt;</span>
+  <span class="tk-p">&lt;intent-filter&gt;</span>
+    <span class="tk-p">&lt;action</span> <span class="tk-at">android:name</span>=<span class="tk-s">"android.intent.action.MAIN"</span> <span class="tk-p">/&gt;</span>
+    <span class="tk-p">&lt;category</span> <span class="tk-at">android:name</span>=<span class="tk-s">"android.intent.category.LAUNCHER"</span> <span class="tk-p">/&gt;</span>
+  <span class="tk-p">&lt;/intent-filter&gt;</span>
+<span class="tk-p">&lt;/activity&gt;</span></div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q5.</span> <mark class="hl">Very likely</mark><br>Explain the Android activity states.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="tw"><table class="cmp"><tr><th>State</th><th>Meaning</th></tr>
+  <tr><td>Created / Started</td><td>Visible, but the user cannot interact</td></tr>
+  <tr><td>Resumed</td><td>Visible and the user CAN interact (normal foreground use)</td></tr>
+  <tr><td>Paused</td><td>Partly visible, the user cannot interact</td></tr>
+  <tr><td>Stopped</td><td>No longer visible (another app opened)</td></tr>
+  <tr><td>Destroyed</td><td>Finished, or destroyed by the system to free resources</td></tr></table></div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q6.</span> Likely<br>What is the primary difference between a mobile OS and a desktop OS? What happens when another app interrupts the current one?</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>A mobile OS is <b>not a true multitasking system</b>: only <b>one app is active</b> at a time. When another app starts or interrupts it (e.g. a phone call), the current app goes <b>Background → Waiting</b> (until the user returns) <b>→ Termination</b> if memory becomes low. On return the app either continues or, if terminated, recreates its screen and restores its state.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q7.</span> Likely<br>Discuss the development challenges of mobile apps.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <ul><li>Competitive, fluid vendor landscape and different platforms (Android, iOS).</li><li>No "standard" device: screen resolution, processing power, memory, OS versions, hardware.</li><li>Low-bandwidth input and limited screen size.</li><li>Unreliable connectivity and device conditions (network, power, light, noise).</li><li>Cloud/enterprise integration: secure communication, compatibility, reliable data exchange.</li></ul>
+  <p>Support: Swift (iOS), Java/Kotlin (Android); cross-platform frameworks (Flutter, Xamarin, Titanium, PhoneGap); built-in services plus add-ons.</p></div></div>
+ </section>
+
+ <section class="block"><h3><svg class="ic" aria-hidden="true"><use href="#i-apple"/></svg>Lecture 4 — iOS Life Cycle &amp; Intents</h3>
+
+  <div class="qa"><div class="qq"><span class="qn">Q1.</span> <mark class="hl">Very likely</mark><br>Write Java code to open https://www.google.com.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="fm"><span class="tk-t">Intent</span> intent = <span class="tk-k">new</span> <span class="tk-t">Intent</span>(Intent.ACTION_VIEW, Uri.<span class="tk-f">parse</span>(<span class="tk-s">"https://www.google.com"</span>));
+<span class="tk-f">startActivity</span>(intent);</div>
+  <p>This is an <b>implicit intent</b>: no component is named, so Android finds a browser through intent filters.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q2.</span> <mark class="hl">Very likely</mark><br>Write a Java program that sends a broadcast with the action "com.example.MY_EVENT" and attaches the message "Hello Android".</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="fm"><span class="tk-t">Intent</span> intent = <span class="tk-k">new</span> <span class="tk-t">Intent</span>(<span class="tk-s">"com.example.MY_EVENT"</span>);
+intent.<span class="tk-f">putExtra</span>(<span class="tk-s">"message"</span>, <span class="tk-s">"Hello Android"</span>);
+intent.<span class="tk-f">addCategory</span>(<span class="tk-s">"android.intent.category.DEFAULT"</span>);
+<span class="tk-f">sendBroadcast</span>(intent);</div>
+  <ul><li><b>new Intent("...")</b> creates a broadcast intent with an action string.</li><li><b>putExtra()</b> attaches extra information.</li><li><b>addCategory()</b> adds an optional category.</li><li><b>sendBroadcast()</b> delivers it to eligible Broadcast Receivers.</li></ul></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q3.</span> <mark class="hl">Very likely</mark><br>Write a Java class MyReceiver that extends BroadcastReceiver and shows "Broadcast received!" in Logcat when a broadcast is received.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <div class="fm"><span class="tk-k">public class</span> <span class="tk-t">MyReceiver</span> <span class="tk-k">extends</span> <span class="tk-t">BroadcastReceiver</span> {
+  <span class="tk-f">@Override</span>
+  <span class="tk-k">public void</span> <span class="tk-f">onReceive</span>(<span class="tk-t">Context</span> context, <span class="tk-t">Intent</span> intent) {
+    Log.<span class="tk-f">d</span>(<span class="tk-s">"MyReceiver"</span>, <span class="tk-s">"Broadcast received!"</span>);
+  }
+}</div>
+  <p><b>onReceive()</b> is called when a matching broadcast arrives.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q4.</span> <mark class="hl">Very likely</mark><br>What is an Intent? Compare explicit and implicit intents.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>An <b>Intent</b> is a messaging object used to request an action from another app component (start an activity, start a service, deliver a broadcast).</p>
+  <div class="tw"><table class="cmp"><tr><th></th><th>Explicit Intent</th><th>Implicit Intent</th></tr>
+  <tr><td>Target</td><td>Names the exact component</td><td>No component named; Android chooses via intent filters</td></tr>
+  <tr><td>Used for</td><td>Components inside the same app (MainActivity → SecondActivity)</td><td>Components in other apps (open a website in a browser)</td></tr></table></div>
+  <div class="fm"><span class="tk-c">// Explicit</span>
+<span class="tk-t">Intent</span> i = <span class="tk-k">new</span> <span class="tk-t">Intent</span>(MainActivity.<span class="tk-k">this</span>, SecondActivity.<span class="tk-k">class</span>);
+<span class="tk-f">startActivity</span>(i);</div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q5.</span> <mark class="hl">Very likely</mark><br>What is an Intent Filter? Show an example.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>An <b>Intent Filter</b> (declared in AndroidManifest.xml) states which implicit Intents a component (Activity, Service or Broadcast Receiver) can handle. Elements: <b>&lt;action&gt;</b> (the operation, written as the literal string), <b>&lt;category&gt;</b> (kind of component, e.g. DEFAULT), <b>&lt;data&gt;</b> (URI scheme, host, port, path, MIME type).</p>
+  <div class="fm"><span class="tk-p">&lt;intent-filter&gt;</span>
+  <span class="tk-p">&lt;action</span> <span class="tk-at">android:name</span>=<span class="tk-s">"android.intent.action.VIEW"</span> <span class="tk-p">/&gt;</span>
+  <span class="tk-p">&lt;category</span> <span class="tk-at">android:name</span>=<span class="tk-s">"android.intent.category.DEFAULT"</span> <span class="tk-p">/&gt;</span>
+  <span class="tk-p">&lt;category</span> <span class="tk-at">android:name</span>=<span class="tk-s">"android.intent.category.BROWSABLE"</span> <span class="tk-p">/&gt;</span>
+  <span class="tk-p">&lt;data</span> <span class="tk-at">android:scheme</span>=<span class="tk-s">"https"</span> <span class="tk-p">/&gt;</span>
+<span class="tk-p">&lt;/intent-filter&gt;</span></div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q6.</span> <mark class="hl">Very likely</mark><br>Explain the iOS application life cycle and the ViewController life cycle, and compare with Android.</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>iOS manages two related life cycles: the <b>application</b> (whole app) and the <b>ViewController</b> (each screen).</p>
+  <div class="tw"><table class="cmp"><tr><th>App method</th><th>Meaning</th><th>Android</th></tr>
+  <tr><td>didFinishLaunchingWithOptions</td><td>App finished launching; state Running (visible and usable)</td><td>onCreate()</td></tr>
+  <tr><td>applicationWillResignActive</td><td>App about to stop being active (interruption / switching apps); state Paused</td><td>onPause()</td></tr>
+  <tr><td>applicationDidEnterBackground</td><td>App moved to the background; not visible or usable</td><td>—</td></tr></table></div>
+  <div class="tw"><table class="cmp"><tr><th>ViewController method</th><th>When / use</th></tr>
+  <tr><td>viewDidLoad</td><td>View loaded into memory: set the title, initialize variables</td></tr>
+  <tr><td>viewWillAppear</td><td>Just before the view appears, every time it reappears: load updated data, update labels</td></tr>
+  <tr><td>viewWillDisappear</td><td>Just before the view disappears: stop animations/timers/services, save important data</td></tr></table></div>
+  <p>States: Loaded → Running → Hidden → Unloaded.</p></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q7.</span> Likely<br>Explain Activity, Service and Broadcast: how is each started?</div><div class="qa-a"><div class="alab">Solution:</div>
+  <ul><li><b>Activity</b> (a single screen): <b>startActivity()</b>; <b>startActivityForResult()</b> to get a result back.</li>
+  <li><b>Service</b> (background work with no UI: music, downloads, server communication): <b>startService()</b> to start it with the required data; <b>bindService()</b> to connect a component to it through an interface.</li>
+  <li><b>Broadcast</b> (a message any app can receive): <b>sendBroadcast()</b>, sendOrderedBroadcast(), sendStickyBroadcast(); received by a <b>BroadcastReceiver</b> in <b>onReceive()</b>.</li></ul>
+  <div class="fm"><span class="tk-c">// Start a service</span>
+<span class="tk-t">Intent</span> s = <span class="tk-k">new</span> <span class="tk-t">Intent</span>(<span class="tk-k">this</span>, MyService.<span class="tk-k">class</span>);
+<span class="tk-f">startService</span>(s);</div></div></div>
+
+  <div class="qa"><div class="qq"><span class="qn">Q8.</span> Likely<br>What is a Broadcast Receiver?</div><div class="qa-a"><div class="alab">Solution:</div>
+  <p>A component that listens for and responds to broadcast messages sent by the Android system or by applications. It extends <b>BroadcastReceiver</b> and overrides <b>onReceive()</b>; it is declared with an intent filter in the manifest so it only receives matching broadcasts.</p></div></div>
+ </section>
+
+ <section class="block"><h3><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg>Last-minute memory list</h3>
+  <ul class="hllist">
+   <li>MVC: Model = data, View = UI, Controller = handles input and coordinates the two.</li>
+   <li>Ranges: cellular miles, Wi-Fi yards, Bluetooth feet, NFC inches.</li>
+   <li>Native = high performance + full device access, but high cost; Hybrid = web + native (Cordova); Web = browser, single code base.</li>
+   <li>RWD = fluid design + flexible images/media + CSS3 media queries.</li>
+   <li>Mobile OS: only one app active; Background → Waiting → Termination.</li>
+   <li>Android: onCreate → onStart → onResume → onPause → onStop → onRestart → onDestroy; onPause is the last guaranteed call.</li>
+   <li>iOS: didFinishLaunching ≈ onCreate; WillResignActive ≈ onPause; DidEnterBackground; viewDidLoad / viewWillAppear / viewWillDisappear.</li>
+   <li>Intent: explicit (same app, names target) vs implicit (other apps, intent filter); startActivity / startService / bindService / sendBroadcast; onReceive.</li>
+  </ul>
+ </section>
+ <div class="botnav" aria-label="التنقل بين الأجزاء"><button data-sub="mob-hl">‹ السابق: Review Checklist</button><span></span></div>
 </div>
 </div>
 </div>

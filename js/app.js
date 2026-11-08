@@ -25,7 +25,7 @@ const $ = s => document.querySelector(s);
 const seen = (() => { try { return JSON.parse(localStorage.getItem("seenTabs") || "[]"); } catch (e) { return []; } })();
 const updSeen = (() => { try { return JSON.parse(localStorage.getItem("updSeen") || "[]"); } catch (e) { return []; } })();
 const saveUpd = () => { try { localStorage.setItem("updSeen", JSON.stringify(updSeen)); } catch (e) {} };
-const UPD = {nlp: 1}; const UNREV = {iot: 1};
+const UPD = {nlp: 1, mob: 1}; const UNREV = {iot: 1};
 const saveSeen = () => { try { localStorage.setItem("seenTabs", JSON.stringify(seen)); } catch (e) {} };
 const cairoToday = () => new Intl.DateTimeFormat("en-CA", {timeZone:"Africa/Cairo"}).format(new Date());
 
