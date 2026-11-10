@@ -258,3 +258,8 @@ table.cmp td{vertical-align:top;text-align:left}
 
 
 .newbadge{display:inline-block;margin-inline-start:6px;padding:1px 7px;border-radius:999px;background:#ff3a44;color:#fff;font:800 10px/1.6 system-ui,sans-serif;letter-spacing:.5px;vertical-align:middle}
+
+/* db: modules 1-2 diagrams */
+.dgcap{color:var(--muted)}
+.dg.wide{overflow-x:auto}
+.dg.wide svg{min-width:560px}
