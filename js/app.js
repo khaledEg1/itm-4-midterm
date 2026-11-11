@@ -43,13 +43,13 @@ function renderSched() {
   box.innerHTML = `<div class="tw"><table class="sched"><thead><tr><th>اليوم</th><th>المادة</th><th>المكان</th><th>الحالة</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
-function panelHTML(t) {
+function panelHTML(t, includeContent = true) {
   if (t.id === "info") return `<h2>${t.title}</h2><p class="sub">ابدأ من هنا</p>${t.html}`;
   let h = `<h2>${t.title}</h2><p class="sub">${t.done ? "الصفحة مكتملة" : "الصفحة لسه تحت التجهيز"}</p>`;
   h += `<section class="block"><h3>المطلوب في الميد تيرم</h3>${t.req}`;
   if (t.exam) h += `<h4>شكل الامتحان</h4>${t.exam}`;
   h += `</section>`;
-  h += t.done ? FR(t.html) : `<div class="wip">الملخص مش جاهز لسه، هيتضاف أثناء الميد تيرم</div>`;
+  if (includeContent) h += t.done ? FR(t.html) : `<div class="wip">الملخص مش جاهز لسه، هيتضاف أثناء الميد تيرم</div>`;
   return h;
 }
 
@@ -65,7 +65,8 @@ function build() {
     b.onclick = () => show(t.id);
     tabs.appendChild(b);
     const p = document.createElement("div");
-    p.className = "panel"; p.id = "p-" + t.id; p.role = "tabpanel"; p.hidden = true; p.innerHTML = panelHTML(t);
+    p.className = "panel"; p.id = "p-" + t.id; p.role = "tabpanel"; p.hidden = true;
+    p.innerHTML = panelHTML(t, t.id === "info"); p.dataset.rendered = String(t.id === "info");
     main.appendChild(p);
   });
   renderSched();
@@ -76,6 +77,13 @@ function build() {
 }
 
 function show(id) {
+  const panel = $("#p-" + id);
+  if (panel.dataset.rendered !== "true") {
+    const subject = TABS.find(t => t.id === id);
+    panel.innerHTML = panelHTML(subject);
+    panel.dataset.rendered = "true";
+    if (id === "cv") cvPick(0);
+  }
   TABS.forEach(t => {
     const sel = t.id === id;
     $("#p-" + t.id).hidden = !sel;
@@ -130,4 +138,3 @@ document.addEventListener("click", e => { const a = e.target.closest("[data-tab]
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeMenu(); });
 document.addEventListener("click", e => { if (!e.target.closest("#nav")) closeMenu(); });
 build();
-cvPick(0);
